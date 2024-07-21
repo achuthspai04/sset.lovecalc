@@ -36,7 +36,7 @@ form.addEventListener("submit", async function (event) {
     // Display the love score
     loveScoreElement.innerHTML = loveScore + "%";
 
-    // Store data in Firestore
+
     try {
         await addDoc(collection(db, "love_calculations"), {
             name1: name1Input.value,
