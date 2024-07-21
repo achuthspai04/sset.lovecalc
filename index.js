@@ -1,15 +1,15 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js';
 import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js';
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
-    measurementId: "YOUR_MEASUREMENT_ID"
+    apiKey: "AIzaSyC1y78P5FTCgUTXUa6oT2lTxFGAWydKoGg",
+    authDomain: "sset-lovecalc.firebaseapp.com",
+    projectId: "sset-lovecalc",
+    storageBucket: "sset-lovecalc.appspot.com",
+    messagingSenderId: "107238745226",
+    appId: "1:107238745226:web:3dd6331c633ebd7b5af973",
+    measurementId: "G-XSYWCPWR0F"
 };
 
 // Initialize Firebase
