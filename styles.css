@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'LED Dot-Matrix';
+    src: url('/path-to-font/LED-Dot-Matrix.woff2') format('woff2'),
+         url('/path-to-font/LED-Dot-Matrix.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
