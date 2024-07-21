@@ -156,6 +156,10 @@ button {
     align-items: center;
 }
 
+#button:hover {
+    background-color: #fe6262; /* Background color on hover */
+}
+
 #name1 {
     margin-top: 0.2rem;
     padding: 0.5rem;
