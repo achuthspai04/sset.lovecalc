@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'LED Dot-Matrix';
-    src: url('/path-to-font/LED-Dot-Matrix.woff2') format('woff2'),
-         url('/path-to-font/LED-Dot-Matrix.woff') format('woff');
+    src: url('./fonts/LED-Dot-Matrix.woff2') format('woff2'),
+         url('./fonts/LED-Dot-Matrix.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -90,7 +90,7 @@ body {
     font-size: var(--navbar-font-size); /* Use the CSS variable */
     color: rgb(0, 0, 0);
     z-index: 1;
-    font-family: "LED Dot-Matrix";
+    font-family: 'LED Dot-Matrix';
 }
 
 section {
@@ -124,14 +124,14 @@ section {
     flex-direction: column;
     align-items: center; 
     gap: 1rem;   
-    font-family: "LED Dot-Matrix";
+    font-family: 'LED Dot-Matrix';
     font-weight: 400;
 }
 
 input {
     width: 14.9rem;
     height: 1.25rem;
-    font-family: "LED Dot-Matrix";
+    font-family: 'LED Dot-Matrix';
     font-weight: 400;
 }
 
@@ -141,7 +141,7 @@ button {
     border-radius: 0.3125rem;
     border: none;
     padding: 1rem;
-    font-family: "LED Dot-Matrix";
+    font-family: 'LED Dot-Matrix';
     font-weight: 600;
     background-color: rgba(236, 57, 57, 0.95);
     cursor: pointer;
@@ -181,9 +181,9 @@ button {
 }
 
 .love-score {
-    font-size: 1.2rem;
-    color: rgb(46, 42, 42);
-    font-weight: bold;
+    font-size: 1.5rem; 
+    color: rgb(60, 55, 55);
     margin: 0;
-    font-family: "LED Dot-Matrix";
+    font-family: 'LED Dot-Matrix';
+    font-weight: 550;
 }
