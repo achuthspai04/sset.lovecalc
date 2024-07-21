@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="./index.js"></script>
+    <title>Love Calculator sset</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navigationbar">
+            <a>Love Calculator sset❤️</a>
+        </div>
+    </div>
+    
+    <section>
+        <div class="rectangle">
+            <div class="circle">
+                <p class="love-score" id="love-score"></p>
+            </div>
+            <form class="form" action="">
+                <div class="n1">
+                    <p class="in1">Your Name?</p>
+                    <input id="name1" type="text" placeholder="Ranbir" required>
+                </div>
+
+                <div class="n2">
+                    <p class="in2">Crush's Name?</p>
+                    <input id="name2" type="text" placeholder="Alia" required>
+                </div>
+
+                <div class="button-container">
+                    <button id="button" type="submit" class="check-button">Check</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const form = document.querySelector(".form");
+        const name1Input = document.querySelector("#name1");
+        const loveScoreElement = document.querySelector("#love-score");
+
+        name1Input.addEventListener("change", function () {
+            loveScoreElement.style.backgroundSize = "cover";
+            loveScoreElement.innerHTML = "";
+        });
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (name1Input.value.length === 0) {
+                alert("Please fill in the names");
+                return;
+            }
+            var loveScore = Math.random() * 100;
+            loveScore = Math.floor(loveScore) + 1;
+
+            loveScoreElement.innerHTML = loveScore + "%";
+        });
+    </script>
+</body>
+</html>

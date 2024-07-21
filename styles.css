@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    flex-shrink: 0;
+}
+
+:root {
+    --navbar-font-size: 2rem; /* Default font size */
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --navbar-font-size: 1.75rem; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --navbar-font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --navbar-font-size: 1.25rem; /* Adjust font size for even smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --navbar-font-size: 1rem; /* Adjust font size for mobile screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .rectangle {
+        width: 100%; 
+        padding: 1rem; 
+    }
+
+    button {
+        width: 100%; 
+        padding: 1rem; 
+    }
+}
+
+.navigationbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 2.1875rem;
+    width: 80%;
+    height: 3.5rem;
+    flex-shrink: 0;
+    top: 1.5rem;
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(206, 184, 184, 0.95);
+    opacity: 0.80;    
+    z-index: 4;
+}
+
+.navigationbar a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--navbar-font-size); /* Use the CSS variable */
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    font-family: "LED Dot-Matrix";
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    z-index: 3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; 
+}
+
+.rectangle {
+    width: 35rem;
+    height: 20rem;
+    background-color: rgba(206, 184, 184, 0.95);
+    border-radius: 2.1875rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+}
+
+.form {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;   
+    font-family: "LED Dot-Matrix";
+    font-weight: 400;
+}
+
+input {
+    width: 14.9rem;
+    height: 1.25rem;
+    font-family: "LED Dot-Matrix";
+    font-weight: 400;
+}
+
+button {
+    width: 6.25rem;
+    height: 1rem;
+    border-radius: 0.3125rem;
+    border: none;
+    padding: 1rem;
+    font-family: "LED Dot-Matrix";
+    font-weight: 600;
+    background-color: rgba(236, 57, 57, 0.95);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name1 {
+    margin-top: 0.2rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.45rem;
+    font-size: 1rem;
+}
+
+#name2 {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.45rem;
+    font-size: 1rem;
+}
+
+.circle {
+    width: 5rem; 
+    height: 5rem; 
+    background-color: rgba(236, 57, 57, 0.95); 
+    border-radius: 50%;
+    position: absolute; 
+    top: -2.5rem;
+    left: 50%; 
+    transform: translateX(-50%); 
+    border: 0.2rem solid rgba(206, 184, 184, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.love-score {
+    font-size: 1.2rem;
+    color: rgb(46, 42, 42);
+    font-weight: bold;
+    margin: 0;
+    font-family: "LED Dot-Matrix";
+}
