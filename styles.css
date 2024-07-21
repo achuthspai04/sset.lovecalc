@@ -176,7 +176,7 @@ button {
 }
 
 .circle {
-    width: 5rem; 
+    width: 9rem; 
     height: 5rem; 
     background-color: rgba(236, 57, 57, 0.95); 
     border-radius: 50%;
@@ -190,10 +190,10 @@ button {
     align-items: center;
 }
 
-.love-score {
-    font-size: 1.5rem; 
+.flames-result {
+    font-size: 1rem; 
     color: rgb(60, 55, 55);
     margin: 0;
     font-family: 'LED Dot-Matrix';
-    font-weight: 550;
+    font-weight: 650;
 }

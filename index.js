@@ -3,13 +3,13 @@ import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/fireba
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC1y78P5FTCgUTXUa6oT2lTxFGAWydKoGg",
-    authDomain: "sset-lovecalc.firebaseapp.com",
-    projectId: "sset-lovecalc",
-    storageBucket: "sset-lovecalc.appspot.com",
-    messagingSenderId: "107238745226",
-    appId: "1:107238745226:web:3dd6331c633ebd7b5af973",
-    measurementId: "G-XSYWCPWR0F"
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID",
+    measurementId: "YOUR_MEASUREMENT_ID"
 };
 
 // Initialize Firebase
@@ -19,7 +19,7 @@ const db = getFirestore(app);
 const form = document.querySelector(".form");
 const name1Input = document.querySelector("#name1");
 const name2Input = document.querySelector("#name2");
-const loveScoreElement = document.querySelector("#love-score");
+const flamesResultElement = document.querySelector("#flames-result");
 
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -29,19 +29,16 @@ form.addEventListener("submit", async function (event) {
         return;
     }
 
-    // Calculate the love score
-    let loveScore = Math.random() * 100;
-    loveScore = Math.floor(loveScore) + 1;
+    // FLAMES algorithm
+    const flamesResult = calculateFlames(name1Input.value, name2Input.value);
+    flamesResultElement.innerHTML = flamesResult;
 
-    // Display the love score
-    loveScoreElement.innerHTML = loveScore + "%";
-
-
+    // Store data in Firestore
     try {
         await addDoc(collection(db, "love_calculations"), {
             name1: name1Input.value,
             name2: name2Input.value,
-            score: loveScore,
+            flames: flamesResult,
             timestamp: new Date()
         });
         console.log("Document written successfully");
@@ -50,5 +47,27 @@ form.addEventListener("submit", async function (event) {
     }
 });
 
-// index.js
+function calculateFlames(name1, name2) {
+    name1 = name1.toLowerCase().replace(/\s/g, '');
+    name2 = name2.toLowerCase().replace(/\s/g, '');
 
+    let combined = name1 + name2;
+
+    for (let char of name1) {
+        if (name2.includes(char)) {
+            name1 = name1.replace(char, '');
+            name2 = name2.replace(char, '');
+        }
+    }
+
+    let totalCount = name1.length + name2.length;
+    const flames = ['Friends', 'Lovers', 'Affectionate', 'Marriage', 'Enemies', 'Siblings'];
+
+    let index = 0;
+    while (flames.length > 1) {
+        index = (index + totalCount - 1) % flames.length;
+        flames.splice(index, 1);
+    }
+
+    return flames[0];
+}
