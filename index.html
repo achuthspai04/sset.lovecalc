@@ -8,6 +8,7 @@
     <script type="module" src="./index.js"></script>
     <title>Love Calculator sset</title>
     <link rel="icon" href="https://qph.cf2.quoracdn.net/main-qimg-ae1bf4e39dcf775a6324d27b45049e29" type="image/x-icon">
+</head>
 
 <body>
 
@@ -40,28 +41,6 @@
         </div>
     </section>
 
-    <script>
-        const form = document.querySelector(".form");
-        const name1Input = document.querySelector("#name1");
-        const loveScoreElement = document.querySelector("#love-score");
-
-        name1Input.addEventListener("change", function () {
-            loveScoreElement.style.backgroundSize = "cover";
-            loveScoreElement.innerHTML = "";
-        });
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            if (name1Input.value.length === 0) {
-                alert("Please fill in the names");
-                return;
-            }
-            var loveScore = Math.random() * 100;
-            loveScore = Math.floor(loveScore) + 1;
-
-            loveScoreElement.innerHTML = loveScore + "%";
-        });
-    </script>
+    
 </body>
 </html>
